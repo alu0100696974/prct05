@@ -1,0 +1,20 @@
+   2.1.) ¿Cuál es el error en el código del método para calcular el máximo común divisor?
+
+En el programa nunca se entra en el bucle debido a la condición v == 0. Para arreglarlo basta con cambiar la condición a v != 0.
+
+   2.2.) ¿Qué comandos del depurador utilizó para detectarlo? Describa la sesión de depuración.
+
+Para encontrar el fallo se utilizó "s" que permite ver paso a paso la ejecución del código, como no entraba en el bucle se descubrió que la condición era errónea.
+
+gcd.rb:9:puts gcd(6,3)
+(rdb:1) s
+gcd.rb:2:  u, v = u.abs, v.abs
+(rdb:1) s
+gcd.rb:3:  while v == 0
+(rdb:1) s
+gcd.rb:6:  u
+(rdb:1) s
+6
+
+
+   2.3.) Escriba la dirección 'HTTP' del repositorio que contiene el desarrollo de su práctica.
